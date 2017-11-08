@@ -12,12 +12,9 @@ def get_most_popular_articles():
 
     print("1. What are the most popular three articles of all time?")
     for row in c:
-        print("* ", row[0], "-", row[1])
+        print(" *", row[0], "-", row[1])
 
     db.close()
-
-
-get_most_popular_articles()
 
 
 def get_most_popular_authors():
@@ -32,12 +29,9 @@ def get_most_popular_authors():
 
     print("2. Who are the most popular article authors of all time?")
     for row in c:
-        print("* ", row[0], "-", row[1])
+        print(" *", row[0], "-", row[1])
 
     db.close()
-
-
-get_most_popular_authors()
 
 
 def get_lead_errors():
@@ -52,9 +46,12 @@ def get_lead_errors():
 
     print("3. On which days did more than 1% of requests lead to errors?")
     for row in c:
-        print("* ", row[0], "-", row[1])
+        print(" *", row[0], "-", row[1])
 
     db.close()
 
 
-get_lead_errors()
+if __name__ == '__main__':
+    get_most_popular_articles()
+    get_most_popular_authors()
+    get_lead_errors()
