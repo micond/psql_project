@@ -1,0 +1,44 @@
+mo034u@mint-mo034u ~/Documents/Udacity/psql_project $ python3 psql_project.py 
+1. What are the most popular three articles of all time?
+*  Bears love berries, alleges bear - 254489
+*  Balloon goons doomed - 84809
+*  There are a lot of bears - 84742
+2. Who are the most popular article authors of all time?
+*  Ursula La Multa - 509035
+*  Markoff Chaney - 84809
+*  Rudolf von Treppenwitz - 0
+*  Anonymous Contributor - 0
+3. On which days did more than 1% of requests lead to errors?
+*  July 17,2016 - 9.78% errors
+*  July 05,2016 - 3.36% errors
+*  July 19,2016 - 3.26% errors
+*  July 21,2016 - 3.22% errors
+*  July 24,2016 - 3.21% errors
+*  July 08,2016 - 3.19% errors
+*  July 06,2016 - 3.18% errors
+*  July 09,2016 - 3.16% errors
+*  July 11,2016 - 3.15% errors
+*  July 25,2016 - 3.14% errors
+*  July 15,2016 - 3.13% errors
+*  July 03,2016 - 3.12% errors
+*  July 22,2016 - 3.10% errors
+*  July 30,2016 - 3.08% errors
+*  July 26,2016 - 3.02% errors
+*  July 20,2016 - 3.02% errors
+*  July 02,2016 - 2.99% errors
+*  July 23,2016 - 2.99% errors
+*  July 18,2016 - 2.98% errors
+*  July 28,2016 - 2.97% errors
+*  July 13,2016 - 2.97% errors
+*  July 16,2016 - 2.97% errors
+*  July 12,2016 - 2.96% errors
+*  July 29,2016 - 2.96% errors
+*  July 27,2016 - 2.95% errors
+*  July 07,2016 - 2.88% errors
+*  July 10,2016 - 2.88% errors
+*  July 04,2016 - 2.85% errors
+*  July 14,2016 - 2.85% errors
+*  July 31,2016 - 2.81% errors
+*  July 01,2016 - 1.91% errors
+mo034u@mint-mo034u ~/Documents/Udacity/psql_project $ 
+

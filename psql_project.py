@@ -41,15 +41,16 @@ def get_lead_errors():
     """Returns day with more than 1% of requests lead to error"""
     db = psycopg2.connect(dbname="news")
     c = db.cursor()
-    c.execute("""select to_char(date, 'FMMonth DD,YYYY'), cast(avg((select
-                 count(status)::float from (select date(time),status from log
-                 where status like '%4%' OR status like '%5%') as t GROUP BY
-                 date order by count DESC limit 1) / ((select count(status)
-                 ::float from (select date(time),status from log where status
-                 like '%4%' OR status like '%5%') as x) / 100))as decimal
-                 (12,2)) || '% errors' as value from (select date(time),status
+    c.execute("""select date, round((cnt/((select count(status) from (select
+                 date(time),status from log where status like '%4%' OR status
+                 like '%5%') as x)/100)::float)::numeric,2)|| '% errors' as
+                 percentage from (select to_char(date, 'FMMonth DD,YYYY') as
+                 date, count(status) as CNT from (select date(time),status
                  from log where status like '%4%' OR status like '%5%') as t
-                 GROUP BY date order by value DESC limit 1""")
+                 GROUP BY date order by CNT DESC) as y
+                 where cnt > ((select count(status) from (select date(time),
+                 status from log where status like '%4%' OR status like '%5%')
+                 as x)/100);""")
 
     print ("3. On which days did more than 1% of requests lead to errors?")
     for row in c:
